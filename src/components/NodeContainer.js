@@ -21,7 +21,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react"
 
-const initialElements = [
+const defaultElements = [
   {
     id: 1,
     type: "input",
@@ -30,13 +30,9 @@ const initialElements = [
   },
 ]
 
-const onLoad = (reactFlowInstance) => {
-  reactFlowInstance.fitview()
-}
-
 function Nodecomponent() {
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const [elements, Setelements] = React.useState(initialElements)
+  const [elements, Setelements] = React.useState(defaultElements)
   const [name, SetName] = React.useState()
   const btnRef = React.useRef()
 
